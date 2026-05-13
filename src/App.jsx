@@ -5,6 +5,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { FaBars, FaTimes, FaSun, FaMoon, FaGraduationCap, FaBriefcase, FaCode, FaGithub, FaExternalLinkAlt, FaExpand, FaLinkedin, FaEnvelope, FaWhatsapp, FaInstagram, FaCertificate, FaRobot, FaTasks, FaUsers } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaXTwitter } from 'react-icons/fa6';
+import GallerySection from './GallerySection.jsx';
 
 // Define styles object outside component
 const styles = {
@@ -331,6 +332,20 @@ function App() {
 
   // Update the projectsData by removing the links property
   const projectsData = [
+    {
+      title: "Support Escalation Bot",
+      description: "Built on the Kore.ai platform, this bot streamlines escalation and prioritization requests from Customer Success teams through conversational workflows. Requests are routed for stakeholder review and approval or rejection, ensuring only valid escalations are accepted while invalid requests are closed with clear reasons. The solution improved escalation governance, visibility, and metric quality across support operations.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+      tags: ["AI Automation", "Escalation Management", "Workflow Governance"],
+      technologies: ["Kore.ai", "Webhook", "Google Chat"]
+    },
+    {
+      title: "LIVE! Chat Support Implementation",
+      description: "Implemented Kore.ai LIVE! Chat Support as part of a broader support transformation initiative to shift from reactive ticket-based operations to high-velocity real-time resolution. Integrated Automation AI, Search AI, Contact Center AI, and Agent AI with internal knowledge articles and documentation to enable instant triage, faster resolutions, and better data capture upfront. Complex issues are converted into formal tickets on behalf of requesters, reducing ticket volume, improving turnaround time, and enhancing customer experience.",
+      image: "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?q=80&w=2070&auto=format&fit=crop",
+      tags: ["Live Chat", "Support Transformation", "Customer Experience"],
+      technologies: ["Kore.ai", "Automation AI", "Search AI", "Contact Center AI", "Agent AI"]
+    },
     {
       title: "Knowledge Base System",
       description: "Developed a comprehensive knowledge base on Outline Wiki and Confluence, serving as a centralized resource for all teams across the organization. It includes detailed knowledge articles, process documentation, and other essential information, significantly improving team efficiency and information accessibility.",
@@ -1075,21 +1090,21 @@ function App() {
   };
 
   const AboutSection = () => (
-    <div name="about" className={styles.sectionContainer}>
+    <div name="about" className={`${styles.sectionContainer} pt-2 md:pt-6`}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-12 items-start py-8"
+          className="grid md:grid-cols-2 gap-12 items-stretch py-8"
         >
           {/* Image Section */}
           <motion.div
             variants={fadeInUp}
-            className="order-2 md:order-1 flex justify-center"
+            className="order-2 md:order-1 flex justify-center md:h-full"
           >
-            <div className="relative w-full max-w-[380px] h-[480px] rounded-xl overflow-hidden shadow-lg group">
+            <div className="relative w-full max-w-[380px] h-[420px] md:h-full md:min-h-[560px] rounded-xl overflow-hidden shadow-lg group">
               <img
                 src="/professional-portrait.jpg"
                 alt="Srujan Madderla - Professional Portrait"
@@ -1116,7 +1131,10 @@ function App() {
               <p className="block">My background includes strategic account management, focused on driving long-term customer success and satisfaction.</p>
               <p className="block">I played a key role in redesigning and optimizing the community portal to improve user engagement and self-service adoption.</p>
               <p className="block">Additionally, I've streamlined business operations by aligning cross-functional teams and automating key workflows.</p>
-              <p className="block">This combination of technical proficiency and business insight enables me to deliver both operational efficiency and exceptional customer experiences.</p>
+              <p className="block">I design AI-driven automations for support and operations, including intelligent ticket triaging, response suggestions, workflow orchestration, and proactive alerting for high-priority incidents.</p>
+              <p className="block">On the delivery side, I lead end-to-end execution by translating business requirements into implementation plans, coordinating across support, engineering, and product teams, and ensuring consistent on-time rollout.</p>
+              <p className="block">I also track delivery health using SLA, quality, and adoption metrics, then iterate with data-backed improvements to maximize efficiency, reliability, and customer impact.</p>
+              <p className="block">This combination of technical proficiency, AI automation expertise, and delivery ownership enables me to drive both operational excellence and exceptional customer experiences.</p>
             </div>
           </motion.div>
         </motion.div>
@@ -1215,8 +1233,8 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <div name="home" className="w-full h-screen bg-white dark:bg-primary transition-colors duration-300">
-        <div className="max-w-[800px] mx-auto px-4 flex flex-col justify-center h-full">
+      <div name="home" className="w-full min-h-[78vh] md:min-h-[82vh] bg-white dark:bg-primary transition-colors duration-300">
+        <div className="max-w-[800px] mx-auto px-4 flex flex-col justify-center min-h-[78vh] md:min-h-[82vh]">
         <motion.div
             initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -1245,6 +1263,10 @@ function App() {
             <h2 className="text-3xl sm:text-6xl font-bold text-lightestText mt-8">
             <TypeAnimation
               sequence={[
+                'AI Automations Expert',
+                2000,
+                'Delivery Manager',
+                2000,
                 'Product Support Expert',
                   2000,
                   'Software Professional',
@@ -1269,6 +1291,8 @@ function App() {
 
       {/* About Section */}
       <AboutSection />
+
+      <GallerySection />
 
       {/* Experience Section */}
       <div name="experience" className={styles.sectionContainer}>
