@@ -925,31 +925,31 @@ function App() {
       {
         name: 'WhatsApp',
         icon: <FaWhatsapp size={24} />,
-        url: 'https://wa.me/+919885514357',
+        url: 'https://wa.me/+919703609652',
         hoverColor: 'hover:text-green-500'
       },
       {
         name: 'Instagram',
         icon: <FaInstagram size={24} />,
-        url: 'https://instagram.com/yourusername',
+        url: 'https://instagram.com/srujan.madderla',
         hoverColor: 'hover:text-pink-500'
       },
       {
         name: 'LinkedIn',
         icon: <FaLinkedin size={24} />,
-        url: 'https://www.linkedin.com/in/srujan-madderla-a0692558/',
+        url: 'https://www.linkedin.com/in/srujan-m-963061108/',
         hoverColor: 'hover:text-blue-500'
       },
       {
         name: 'X (Twitter)',
         icon: <FaXTwitter size={24} />,
-        url: 'https://twitter.com/yourusername',
+        url: 'https://x.com/SrujanMadd83107',
         hoverColor: 'hover:text-gray-700 dark:hover:text-gray-300'
       },
       {
         name: 'Email',
         icon: <FaEnvelope size={24} />,
-        url: 'mailto:smadderla91@gmail.com',
+        url: 'mailto:srujan.madd@gmail.com',
         hoverColor: 'hover:text-red-500'
       }
     ];
